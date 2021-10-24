@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AstroSign</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dob">25/01/2001</string>
+    <string name="text">Astrologists study the movement of the stars and planets and predict how those movements might affect human behavior. Everyone\'s birthday is associated with a particular zodiac sign, and astrologists believe that predictions can be made about a person\'s personality based upon the location and movement of the stars and planets at the time of their birth.</string>
+</resources>
