@@ -1,10 +1,12 @@
 package com.example.astrosign
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.astrosign.databinding.FragmentInputBinding
 
@@ -25,11 +27,15 @@ class InputFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
-            val date=if(date.text.isNotEmpty())date.text.toString() else 0
-            val month=if(month.text.isNotEmpty())month.text.toString() else 0
             submit.setOnClickListener {
-                val action=InputFragmentDirections.actionInputFragmentToResultFragment(date.toString().toInt(),month.toString().toInt())
-                findNavController().navigate(action)
+                if(date.text.isEmpty()||month.text.isEmpty())
+                    Toast.makeText(activity,"please enter date of birth Thank you",Toast.LENGTH_SHORT).show()
+                else {
+                    val action = InputFragmentDirections.actionInputFragmentToResultFragment(
+                        date.text.toString().toInt(), month.text.toString().toInt()
+                    )
+                    findNavController().navigate(action)
+                }
             }
         }
     }

@@ -13,9 +13,6 @@
         <action
             android:id="@+id/action_inputFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
-        <action
-            android:id="@+id/action_inputFragment_to_resultFragment2"
-            app:destination="@id/resultFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"

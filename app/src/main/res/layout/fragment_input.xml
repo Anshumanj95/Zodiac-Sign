@@ -48,7 +48,7 @@
                 android:layout_weight="1"
                 android:hint="25"
                 android:maxLines="1"
-                android:inputType="date"
+                android:inputType="number"
                 android:textAlignment="center"
                 android:textColor="#FFA726"
                 android:textColorHint="#FFA726"
